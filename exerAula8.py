@@ -41,14 +41,16 @@ n1 = float(input('Primeiro lado: '))
 n2 = float(input('Segundo lado: '))
 n3 = float(input('Terceiro lado: '))
 
-if n1 < n2 + n3 and n2 < n1 + n3 and n3 < n1+ n2: # Essa condição é uma das principais razões de não formar um triangulo!
-    print('Essa condição pode formar um triangulo,', end='')
+if n1 < n2 + n3 and n2 < n1 + n3 and n3 < n1+ n2: # Essa condição é uma das principais razões para formar um triangulo!
+    print('Essa condição pode formar um triangulo', end='')
     if n1 == n2 == n3:
         print('Equilátero!')
     elif n1 != n2 != n3 != n1:
         print('Escaleno!')
-    else:
+    elif n1 == n2 != n3 or n1 == n3 != n2 or n2 == n3 != n1:
         print('Isósceles!')
+else:
+    print('Não pode formar um Triângulo!')
 
 print('Fim do Programa!🏁')
     
